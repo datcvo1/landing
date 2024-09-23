@@ -1,8 +1,8 @@
-body, .header, .headerLinks, .content, .intro, .introText, .main, .cards {
+body, .header, .headerLinks, .content, .intro, .introText, .main, .cards, .quote, .call {
     display: flex;
 }
 
-body, .content, .introText, .main {
+body, .content, .introText, .main, .quote {
     flex-direction: column;
 }
 
@@ -14,7 +14,7 @@ body {
 
 .header {
     background-color: #1F2937;
-    padding: 12px 200px;
+    padding: 16px 300px;
     align-items: center;
 }
 
@@ -22,7 +22,6 @@ body {
    font-size: 24px;
    font-weight: 900; 
    color: #F9FAF8;
-   
 }
 
 .headerLinks {
@@ -36,49 +35,46 @@ body {
     font-size: 18px;
 }
 
-.content {
-    height: 100%;
-}
-
 .intro, .main, .quote, .call {
-    flex: 1;
+    flex: 1 1 300px;
+    padding: 60px 300px;
     min-height: 0%;
 }
 
 .intro {
     background-color: #1F2937;
     gap: 64px;
-    padding: 0px 200px;
 }
 
 .introText, .trees {
     flex: 1;
 }
 
-.introText {
-    gap: 8px;
-}
-
 .introText p {
+    flex: 1;
     color: #E5E7EB;
+    margin: 0px 0px;
 }
 
 button {
+    min-height: 0;
+    flex: 0 0 35px;
     background-color: #3882F6;
+    font-weight: bold;
     color: #E5E7EB;
     border: none;
     border-radius: 8px;
-    padding: 8px 16px;
-    width: 80px;
+    width: 90px;
 }
 
 img {
     width: 100%;
-    height: 80%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: fill;
 }
 
 .content h1 {
+    flex: 1;
     font-size: 48px;
     font-weight: 900;
     color: #F9FAF8;
@@ -88,21 +84,87 @@ img {
 .main {
     justify-content: center;
     align-items: center;
-    gap: 16px;
+}
+
+.mainTitle {
+    font-weight: bolder;
 }
 
 .cards {
     gap: 24px;
 }
 
-.card {
-    width: 200px;
-    height: 200px;
+.card p {
+    text-align: center;
+    color: #5e5e5e;
+    width: 140px;
+    text-wrap: wrap;
+    font-size: 16px;
+}
+
+.frame {
+    width: 140px;
+    height: 140px;
     border: #3882F6;
     border-radius: 5%;
     border-style: solid;
 }
 
+.quote {
+    justify-content: center;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.quote span {
+    font-style: normal;
+    font-weight: bolder;
+    margin-left: auto;
+}
+
+.call {
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    background-color: #3882F6;
+    border-radius: 8px;
+    color: #E5E7EB;
+    padding: 40px 100px;
+    gap: 60px;
+    font-size: 20px;
+    width: 80%;
+}
+
+.banner div {
+    margin-right: auto;
+}
+
+.bannerBold {
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.banner button {
+    /* min-height: 0; */
+    flex: 0 0 90px;
+    background-color: #3882F6;
+    font-weight: bold;
+    color: #E5E7EB;
+    border: #E5E7EB;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+}
+
 .footer {
+    align-content: center;
+    text-align: center;
     margin-top: auto;
+    padding: 30px 0px;
+    background-color: #1F2937;
+    color: #E5E7EB;
 }
